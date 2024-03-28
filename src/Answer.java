@@ -1,20 +1,18 @@
 public class Answer {
-    public static boolean printPrimeNums(int number) {
-
-        for (int i = 2; i <number ; i++) {
-                boolean check = true;
-                    for(int j = 2; j < i; j++ ) {
-                        if (i % j == 0) {
-                            check = false;
-                            break;
-                        }
-
+    public static void printPrimeNums(int number) {
+        for (int i = 2; i < number; i++) {
+            boolean isPrime = true;
+            for (int j = 2; j * j <= i; j++) { // Оптимизированный цикл
+                if (i % j == 0) {
+                    isPrime = false;
+                    break;
                 }
-                    if (check) {
-                        System.out.println(i);
-                    }
+            }
+            if (isPrime) {
+                System.out.print(i + " ");
+            }
         }
 
-        return false;
     }
+
 }
