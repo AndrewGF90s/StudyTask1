@@ -4,6 +4,6 @@
 //Напишите свой код в методе printPrimeNums класса Answer.
 public class Main {
     public static void main(String[] args) {
-        System.out.println(Answer.printPrimwNums(1000));
+        System.out.println(Answer.printPrimeNums(1000));
     }
 }

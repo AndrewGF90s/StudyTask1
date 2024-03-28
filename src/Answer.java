@@ -1,11 +1,20 @@
 public class Answer {
-    public void printPrimeNums() {
-        int number = 1000;
-        for (int i = 1; i <number ; i++) {
-                if (i % 2 == 0 && i % 3 == 0) {
-                    System.out.println(i);
+    public static boolean printPrimeNums(int number) {
+
+        for (int i = 2; i <number ; i++) {
+                boolean check = true;
+                    for(int j = 2; j < i; j++ ) {
+                        if (i % j == 0) {
+                            check = false;
+                            break;
+                        }
+
                 }
+                    if (check) {
+                        System.out.println(i);
+                    }
         }
 
+        return false;
     }
 }
